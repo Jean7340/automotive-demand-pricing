@@ -1,53 +1,67 @@
-# Automotive Demand & Pricing Strategy
+# 🚗 Automotive Demand & Pricing Strategy
 
-> Estimating demand and translating pricing analytics into business decisions using panel data from the European automotive market.
-
----
-
-## Project Overview
-
-Pricing decisions rarely depend on price alone.
-
-Manufacturers must understand how demand responds to price, how product attributes influence purchasing decisions, and how competition shapes market outcomes.
-
-This project demonstrates an end-to-end pricing analytics workflow using European automobile market data.
-
-Rather than focusing solely on econometric modeling, the project connects demand estimation with pricing strategy and managerial recommendations.
+> Estimating demand and translating pricing analytics into pricing decisions using panel data from the European automotive market.
 
 ---
 
-## Business Problem
+![Workflow](figures/workflow.png)
 
-A European automobile manufacturer wants to answer four questions:
+---
 
-1. What drives vehicle demand?
-2. How price-sensitive are customers?
+# Project Overview
+
+Pricing decisions are among the most important strategic levers in the automotive industry.
+
+However, increasing prices does not always increase revenue. Manufacturers must understand:
+
+- How sensitive customers are to price
+- Which product attributes drive demand
+- How competitors influence purchasing decisions
+- What pricing strategy maximizes revenue
+
+This project develops an end-to-end pricing analytics workflow using panel data covering the European automobile market.
+
+---
+
+# Business Questions
+
+This project answers five business questions.
+
+1. What factors drive vehicle demand?
+
+2. How price-sensitive is the market?
+
 3. How does competition affect demand?
-4. How should pricing decisions change under different market conditions?
+
+4. What happens if prices change?
+
+5. What pricing strategy should management adopt?
 
 ---
 
-## Dataset
+# Dataset
+
+European Automobile Market
 
 Observation level
 
-Vehicle Model × Country × Year
+Vehicle × Market × Year
 
 11,431 observations
 
 54 variables
 
-Main variable groups
+Main information includes
 
-- Product Attributes
-- Pricing
-- Competition
-- Macroeconomics
-- Sales
+- Product attributes
+- Vehicle prices
+- Competitor information
+- Macroeconomic indicators
+- Vehicle sales
 
 ---
 
-## Analytical Workflow
+# Analytical Workflow
 
 Business Understanding
 
@@ -61,7 +75,7 @@ Demand Estimation
 
 ↓
 
-Price Elasticity
+Elasticity Analysis
 
 ↓
 
@@ -69,98 +83,106 @@ Pricing Simulation
 
 ↓
 
-Business Recommendations
+Management Recommendation
 
 ---
 
-## Project Structure
+# Executive Dashboard
 
-01_data_audit.ipynb
-
-Understand dataset quality and business context.
+(这里放最终Dashboard图片)
 
 ---
 
-02_market_understanding.ipynb
+# Key Findings
 
-Analyze the European automobile market.
+## Finding 1
 
-Business Questions
+Vehicle demand is price elastic.
 
-- Is demand growing?
-- Which manufacturers dominate the market?
-- How is the market segmented?
+Estimated price elasticity:
 
----
+**-1.37**
 
-03_demand_estimation.ipynb
-
-Estimate market demand using econometric models.
-
-Topics
-
-- OLS
-- Control Variables
-- Fixed Effects
-- Instrumental Variables
+This implies that a 1% increase in price is associated with approximately a 1.37% decrease in demand.
 
 ---
 
-04_pricing_analysis.ipynb
+## Finding 2
 
-Translate econometric results into pricing insights.
+Broad price increases reduce revenue.
 
-Topics
+Pricing simulation suggests that:
 
-- Price Elasticity
-- Revenue Impact
-- Scenario Analysis
-
----
-
-05_business_recommendations.ipynb
-
-Provide executive-level pricing recommendations.
-
-Topics
-
-- Pricing implications
-- Competitive considerations
-- Risks and limitations
+| Price Change | Revenue Change |
+|--------------|---------------|
+| -10% | +2.3% |
+| -5% | +1.5% |
+| +5% | -2.2% |
+| +10% | -5.1% |
 
 ---
 
-## Key Findings
+## Finding 3
 
-(To be completed after analysis)
+Competition matters.
 
-Example
-
-- Vehicle demand is price-sensitive.
-- Product differentiation reduces reliance on price competition.
-- Competitive pricing significantly influences market demand.
+Relative competitive positioning significantly influences demand, while simply having more competitors does not necessarily reduce sales after controlling for other factors.
 
 ---
 
-## Skills Demonstrated
+# Business Recommendations
 
-Pricing Analytics
+Based on the estimated demand model,
 
-Econometric Modeling
+✓ Avoid broad portfolio-wide price increases.
 
-Business Analytics
+✓ Evaluate targeted promotional pricing.
 
-Panel Data Analysis
+✓ Continuously monitor competitor pricing.
 
-Causal Inference
-
-Pricing Strategy
-
-Business Communication
+✓ Differentiate pricing across market segments.
 
 ---
 
-## Tech Stack
+# Repository Structure
+
+```
+notebooks/
+
+01_data_audit
+
+02_market_understanding
+
+03_demand_estimation
+
+04_pricing_analysis
+
+05_competition_analysis
+
+06_executive_summary
+```
+
+---
+
+# Skills Demonstrated
+
+- Pricing Analytics
+
+- Econometrics
+
+- Panel Data Modeling
+
+- Demand Estimation
+
+- Business Analytics
+
+- Pricing Strategy
+
+- Executive Communication
+
+---
+
+# Tech Stack
 
 Python
 
@@ -176,12 +198,12 @@ Jupyter Notebook
 
 ---
 
-## Future Extensions
+# Future Improvements
 
-Customer-level choice modeling
+- Customer-level discrete choice model
 
-Profit optimization
+- Profit optimization
 
-Dynamic pricing
+- Dynamic pricing
 
-Interactive dashboard
+- Interactive dashboard
