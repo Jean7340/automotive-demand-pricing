@@ -89,9 +89,6 @@ automotive-demand-pricing-strategy/
 │   ├── 05_competitive_dynamics.ipynb
 │   └── 06_executive_pricing_strategy.ipynb
 │
-├── reports/
-│   └── executive_summary.md
-│
 ├── images/
 │
 └── README.md
